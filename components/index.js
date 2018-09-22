@@ -99,12 +99,30 @@ export default class Form extends Component {
     return (
       this.state.baseFolder ? (
         <div id='dropform'>
-          <div id="dropzone">
-            {_.chunk(this.state.folders, this.state.perRow).map((rows, rowsIdx) => (
-              <div className='droprow' key={rowsIdx}>{rows.map(folder => (
-                <div style={{ backgroundColor: randomcolor({ luminosity: 'dark' }), color: 'white' }} key={folder} className='dropfolder' data-folder={folder}>{folder} <button onClick={() => this.removeFolder({ folder })}>remove</button></div>
-              ))}</div>
-            ))}
+          <div className='drop-header'>
+
+          </div>
+
+          <div className='drop-main'>
+            <div className='drop-side'>
+
+            </div>
+
+            <div className='drop-area'>
+              {_.chunk(this.state.folders, this.state.perRow).map((rows, rowsIdx) => (
+                <div className='droprow' key={rowsIdx}>{rows.map(folder => (
+                  <div style={{ backgroundColor: randomcolor({ luminosity: 'dark' }), color: 'white' }} key={folder} className='dropfolder' data-folder={folder}>{folder} <button onClick={() => this.removeFolder({ folder })}>remove</button></div>
+                ))}</div>
+              ))}
+            </div>
+
+            <div className='drop-side'>
+
+            </div>
+          </div>
+
+          <div className='drop-footer'>
+
           </div>
         </div>
       ) : (

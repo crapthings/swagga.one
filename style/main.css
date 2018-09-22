@@ -6,7 +6,7 @@ body {
   -webkit-user-select: none;
   -webkit-app-region: drag;
   /*background-color: rgba(255, 255, 255, .4);*/
-  background-color: grey;
+  background-color: transparent;
 }
 
 #dropform {
@@ -15,11 +15,7 @@ body {
   height: 100%;
 }
 
-#dropzone {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
+
 
 #dropfolders {
   display: flex;
@@ -34,4 +30,26 @@ body {
 
 .dropfolder {
   flex: 1;
+}
+
+.drop-header, .drop-footer {
+  height: 48px;
+}
+
+.drop-side {
+  width: 48px;
+}
+
+.drop-main {
+  display: flex;
+  flex: 1;
+
+}
+
+.drop-area {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 8px;
 }
