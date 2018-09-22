@@ -1,0 +1,37 @@
+html, body, #app {
+  height: 100vh;
+}
+
+body {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  background-color: rgba(255, 255, 255, .4);
+  background-color: white;
+}
+
+#dropform {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#dropzone {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#dropfolders {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.droprow {
+  display: flex;
+  flex: 1;
+}
+
+.dropfolder {
+  flex: 1;
+}
