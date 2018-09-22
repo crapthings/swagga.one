@@ -1,5 +1,5 @@
 {
-  "name": "@crapthings/tidyup.one",
+  "name": "@crapthings/swagga.one",
   "version": "1.0.0",
   "description": "",
   "main": "boot.js",
@@ -18,6 +18,8 @@
     "electron": "^3.0.0"
   },
   "dependencies": {
+    "chokidar": "^2.0.4",
+    "fs-extra": "^7.0.0",
     "fs-plus": "^3.0.2",
     "lodash": "^4.17.11",
     "randomcolor": "^0.5.3",

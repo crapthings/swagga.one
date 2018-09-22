@@ -5,8 +5,8 @@ html, body, #app {
 body {
   -webkit-user-select: none;
   -webkit-app-region: drag;
-  background-color: rgba(255, 255, 255, .4);
-  background-color: white;
+  /*background-color: rgba(255, 255, 255, .4);*/
+  background-color: grey;
 }
 
 #dropform {
