@@ -2,17 +2,16 @@
   "name": "@crapthings/swagga.one",
   "version": "1.0.0",
   "description": "",
-  "main": "boot.js",
+  "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "new": "electron-packager ."
+    "dev": "parcel ./src/index.html -d build/",
+    "start-dev": "ELECTRON_START_URL=http://localhost:1234 electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
@@ -20,7 +19,9 @@
     "@babel/register": "^7.0.0",
     "electron": "^3.0.0",
     "electron-builder": "^20.28.4",
-    "electron-packager": "^12.1.2"
+    "electron-packager": "^12.1.2",
+    "electron-reload": "^1.2.5",
+    "parcel-bundler": "^1.9.7"
   },
   "dependencies": {
     "chokidar": "^2.0.4",
@@ -30,7 +31,8 @@
     "randomcolor": "^0.5.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "url": "^0.11.0"
   },
   "build": {
     "appId": "swagga.one",

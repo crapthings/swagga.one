@@ -1,7 +1,0 @@
-directories:
-  output: dist
-  buildResources: build
-appId: swagga.one
-mac:
-  category: Productivity
-electronVersion: 3.0.0

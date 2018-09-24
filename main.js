@@ -1,4 +1,10 @@
+const path = require('path')
 const { app, BrowserWindow, Menu, Tray, globalShortcut } = require('electron')
+const url = require('url')
+
+if (process.env.ELECTRON_START_URL) {
+  require('electron-reload')(__dirname)
+}
 
 let win, tray
 
@@ -30,9 +36,17 @@ function createWindow () {
 
   win.setMenu(null)
 
-  win.loadFile('index.html')
+  const startUrl = process.env.ELECTRON_START_URL || url.format({
+    pathname: path.join(__dirname, './build/index.html'),
+    protocol: 'file:',
+    slashes: true
+  })
 
-  // win.webContents.openDevTools()
+  console.log(startUrl)
+
+  win.loadURL(startUrl)
+
+  win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
@@ -40,7 +54,7 @@ function createWindow () {
 }
 
 function createTray() {
-  tray = new Tray('./assets/tray.png')
+  tray = new Tray(path.join(__dirname, './build//assets/tray.png'))
 
   tray.on('click', () => {
     win.isVisible() ? win.hide() : win.show()
